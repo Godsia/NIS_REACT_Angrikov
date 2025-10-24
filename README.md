@@ -22,11 +22,3 @@
 - **HW_5** - Планируется
 - **HW_6** - Планируется
 
-## 🔗 Pull Requests
-
-- **HW_1**: [PR #1](https://github.com/Godsia/NIS_REACT_Angrikov/pull/1) - Reviewers: @olov2020, @nadumkin
-
----
-
-**Курс:** React Development  
-**Университет:** НИУ ВШЭ
