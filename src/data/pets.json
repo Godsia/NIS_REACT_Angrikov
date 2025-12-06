@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "name": "Cat",
+    "species": "Feline",
+    "mood": "happy",
+    "energy": 80,
+    "level": 1,
+    "avatar": "🐱"
+  },
+  {
+    "id": 2,
+    "name": "Dog",
+    "species": "Canine",
+    "mood": "happy",
+    "energy": 65,
+    "level": 2,
+    "avatar": "🐶"
+  },
+  {
+    "id": 3,
+    "name": "Bird",
+    "species": "Avian",
+    "mood": "neutral",
+    "energy": 50,
+    "level": 1,
+    "avatar": "🦅"
+  },
+  {
+    "id": 4,
+    "name": "Fish",
+    "species": "Aquatic",
+    "mood": "happy",
+    "energy": 90,
+    "level": 3,
+    "avatar": "🐠"
+  },
+  {
+    "id": 5,
+    "name": "Bear",
+    "species": "Ursine",
+    "mood": "neutral",
+    "energy": 40,
+    "level": 1,
+    "avatar": "🐻"
+  },
+  {
+    "id": 6,
+    "name": "Byte-Fox",
+    "species": "Cyber-Vulpine",
+    "mood": "happy",
+    "energy": 75,
+    "level": 2,
+    "avatar": "🦊"
+  }
+]
+
