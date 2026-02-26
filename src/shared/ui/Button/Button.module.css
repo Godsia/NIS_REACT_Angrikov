@@ -1,0 +1,37 @@
+.button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.button:not(:disabled):hover {
+  opacity: 0.9;
+}
+
+.primary {
+  background: var(--color-primary, #2563eb);
+  color: white;
+}
+
+.secondary {
+  background: var(--color-surface-2);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+.danger {
+  background: var(--color-danger, #dc2626);
+  color: white;
+}
+
+.fullWidth {
+  width: 100%;
+}

@@ -1,0 +1,40 @@
+.page {
+  max-width: 480px;
+}
+
+.title {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+  color: var(--color-text);
+}
+
+.card {
+  padding: 1.5rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25rem 1.5rem;
+  margin: 0 0 1rem;
+}
+
+.list dt {
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.list dd {
+  margin: 0;
+}

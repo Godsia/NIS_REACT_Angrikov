@@ -1,0 +1,50 @@
+.sidebar {
+  width: 220px;
+  padding: 1rem 0;
+  background: var(--color-surface-2);
+  border-right: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.link {
+  padding: 0.5rem 1rem;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  border-radius: 4px;
+  margin: 0 0.5rem;
+}
+
+.link:hover {
+  background: var(--color-surface-hover);
+  color: var(--color-text);
+}
+
+.link.active {
+  background: var(--color-primary-light, rgba(37, 99, 235, 0.15));
+  color: var(--color-primary, #2563eb);
+  font-weight: 500;
+}
+
+.logout {
+  margin: 0.5rem 1rem;
+  padding: 0.5rem;
+  background: transparent;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.logout:hover {
+  background: var(--color-surface-hover);
+  color: var(--color-text);
+}

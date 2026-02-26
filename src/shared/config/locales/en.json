@@ -1,0 +1,73 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "retry": "Retry",
+    "save": "Save",
+    "cancel": "Cancel",
+    "back": "Back",
+    "search": "Search",
+    "logout": "Logout"
+  },
+  "auth": {
+    "login": "Login",
+    "loginTitle": "Sign in",
+    "username": "Username",
+    "password": "Password",
+    "submit": "Sign in",
+    "errors": {
+      "required": "This field is required",
+      "invalidCredentials": "Invalid username or password",
+      "network": "Network error. Please try again."
+    }
+  },
+  "register": {
+    "title": "Registration",
+    "stub": "Registration is not supported by the demo API. Use the login page to sign in with test credentials (e.g. emilys, emilyspass)."
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "products": "Products",
+    "profile": "Profile",
+    "settings": "Settings",
+    "logout": "Logout"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome to E-commerce Admin"
+  },
+  "products": {
+    "title": "Products",
+    "list": "Product list",
+    "detail": "Product details",
+    "price": "Price",
+    "rating": "Rating",
+    "category": "Category",
+    "empty": "No products found",
+    "emptySearch": "No products match your search",
+    "searchPlaceholder": "Search by name...",
+    "page": "Page",
+    "of": "of",
+    "prev": "Previous",
+    "next": "Next"
+  },
+  "profile": {
+    "title": "Profile",
+    "name": "Name",
+    "email": "Email",
+    "username": "Username"
+  },
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "theme": "Theme",
+    "themeLight": "Light",
+    "themeDark": "Dark",
+    "pageSize": "Products per page"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The page you are looking for does not exist.",
+    "goHome": "Go to Dashboard"
+  }
+}

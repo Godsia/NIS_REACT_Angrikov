@@ -1,0 +1,73 @@
+{
+  "common": {
+    "loading": "Загрузка...",
+    "error": "Ошибка",
+    "retry": "Повторить",
+    "save": "Сохранить",
+    "cancel": "Отмена",
+    "back": "Назад",
+    "search": "Поиск",
+    "logout": "Выйти"
+  },
+  "auth": {
+    "login": "Вход",
+    "loginTitle": "Войти в систему",
+    "username": "Имя пользователя",
+    "password": "Пароль",
+    "submit": "Войти",
+    "errors": {
+      "required": "Обязательное поле",
+      "invalidCredentials": "Неверный логин или пароль",
+      "network": "Ошибка сети. Попробуйте снова."
+    }
+  },
+  "register": {
+    "title": "Регистрация",
+    "stub": "Регистрация не поддерживается демо API. Используйте страницу входа с тестовыми данными (например, emilys / emilyspass)."
+  },
+  "nav": {
+    "dashboard": "Главная",
+    "products": "Продукты",
+    "profile": "Профиль",
+    "settings": "Настройки",
+    "logout": "Выйти"
+  },
+  "dashboard": {
+    "title": "Главная",
+    "welcome": "Добро пожаловать в E-commerce Admin"
+  },
+  "products": {
+    "title": "Продукты",
+    "list": "Список продуктов",
+    "detail": "Детали продукта",
+    "price": "Цена",
+    "rating": "Рейтинг",
+    "category": "Категория",
+    "empty": "Продукты не найдены",
+    "emptySearch": "По вашему запросу ничего не найдено",
+    "searchPlaceholder": "Поиск по названию...",
+    "page": "Страница",
+    "of": "из",
+    "prev": "Назад",
+    "next": "Вперёд"
+  },
+  "profile": {
+    "title": "Профиль",
+    "name": "Имя",
+    "email": "Email",
+    "username": "Имя пользователя"
+  },
+  "settings": {
+    "title": "Настройки",
+    "language": "Язык",
+    "theme": "Тема",
+    "themeLight": "Светлая",
+    "themeDark": "Тёмная",
+    "pageSize": "Продуктов на странице"
+  },
+  "notFound": {
+    "title": "Страница не найдена",
+    "description": "Запрашиваемая страница не существует.",
+    "goHome": "На главную"
+  }
+}

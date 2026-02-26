@@ -1,46 +1,91 @@
-# Getting Started with Create React App
+# E-commerce Admin (HW_3)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+SPA административная панель для e-commerce системы на React + TypeScript, Redux Toolkit, RTK Query, React Router и i18n. Backend API: [DummyJSON](https://dummyjson.com).
 
-## Available Scripts
+## Запуск
 
-In the project directory, you can run:
+```bash
+npm install --legacy-peer-deps
+npm start
+```
 
-### `npm start`
+Приложение откроется на [http://localhost:3000](http://localhost:3000).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+В режиме разработки запросы к API идут через прокси (см. `proxy` в `package.json`), чтобы избежать CORS. **После изменения `package.json` перезапустите dev-сервер** (остановите и снова выполните `npm start`).
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+**Тестовые данные для входа (DummyJSON):**
+- Логин: `emilys`
+- Пароль: `emilyspass`
 
-### `npm test`
+## Сборка
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm run build
+```
 
-### `npm run build`
+## Архитектура (Feature Sliced Design)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Слои не импортируют из вышележащих (shared ← entities ← features ← widgets ← pages ← app).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+src/
+├── app/                    # Инициализация приложения
+│   ├── api/                # RTK Query: baseApi, authApi, productsApi
+│   ├── store/              # Redux store, auth/settings слайсы, селекторы
+│   ├── router/             # React Router, маршруты, lazy loading
+│   └── init/               # AuthInit (getMe при загрузке), ThemeAndLanguageSync
+├── pages/                  # Страницы (ленивая загрузка)
+│   ├── login, register     # Публичные
+│   ├── dashboard, products, profile, settings, logout, not-found  # Приватные / 404
+├── widgets/                # Композитные блоки
+│   └── layout/             # Header, Sidebar, MainLayout
+├── features/               # Действия пользователя
+│   ├── auth/               # LoginForm, ProtectedRoute
+│   └── settings/           # LanguageSelect, ThemeToggle, PageSizeSelect
+├── entities/               # Бизнес-сущности (типы)
+│   ├── product/
+│   └── user/
+└── shared/                 # Переиспользуемое
+    ├── config/             # Константы, локали (ru/en)
+    ├── lib/                # i18n, redux hooks (useAppDispatch, useAppSelector)
+    └── ui/                 # Button, Input, ErrorBoundary
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Основные решения
 
-### `npm run eject`
+- **Аутентификация:** RTK Query (`authApi`: `login`, `getMe`). Токен и пользователь в Redux (auth slice). При перезагрузке — `AuthInit` вызывает `getMe` по сохранённому токену и выставляет `isInitialized`.
+- **Маршруты:** Публичные `/login`, `/register`. Приватные под `ProtectedRoute` с общим `MainLayout` (Header + Sidebar + Outlet). Lazy loading страниц. Редиректы: неавторизован → `/login`, авторизован на `/login` → `/`.
+- **Продукты:** RTK Query (`productsApi`: `getProducts`, `getProduct`). Список с поиском (`q`) и пагинацией (`limit`/`skip` из настроек). Состояния: loading, error, empty.
+- **Настройки:** Redux (settings slice) + redux-persist (localStorage). Язык (ru/en), тема (light/dark), размер страницы каталога. Связь с i18n через `ThemeAndLanguageSync` и `changeLanguage`.
+- **Ошибки:** Error Boundary в корне приложения.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Скриншоты ключевых сценариев
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Страница логина** (`/login`)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+   ![Логин](docs/Снимок%20экрана%202026-02-26%20в%2015.10.55.png)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+2. **Dashboard после входа** (`/`)
 
-## Learn More
+   ![Dashboard](docs/Снимок%20экрана%202026-02-26%20в%2015.03.16.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. **Список продуктов с поиском и пагинацией** (`/products`)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ![Список продуктов](docs/Снимок%20экрана%202026-02-26%20в%2015.03.41.png)
+
+4. **Детальная страница продукта** (`/products/1`)
+
+   ![Детали продукта](docs/Снимок%20экрана%202026-02-26%20в%2015.05.54.png)
+
+5. **Профиль пользователя** (`/profile`)
+
+   ![Профиль](docs/Снимок%20экрана%202026-02-26%20в%2015.03.54.png)
+
+6. **Настройки** (язык, тема, размер страницы) (`/settings`)
+
+   ![Настройки](docs/Снимок%20экрана%202026-02-26%20в%2015.04.16.png)
+
+7. **Страница 404** (несуществующий путь)
+
+   ![404](docs/Снимок%20экрана%202026-02-26%20в%2015.05.25.png)
+
