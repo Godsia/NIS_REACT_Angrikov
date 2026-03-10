@@ -1,0 +1,65 @@
+{
+  "trainings": [
+    {
+      "id": "7dd9",
+      "userId": 1,
+      "trainingTypeId": 4,
+      "trainingTypeLabel": "Бег",
+      "type": "endurance",
+      "date": "2026-03-08T16:50:46.262Z",
+      "kilometers": 12,
+      "timeMinutes": 100
+    },
+    {
+      "id": "b2c6",
+      "userId": 1,
+      "trainingTypeId": 4,
+      "trainingTypeLabel": "Бег",
+      "type": "endurance",
+      "date": "2026-03-08T17:08:25.089Z",
+      "kilometers": 2,
+      "timeMinutes": 12
+    },
+    {
+      "id": "041d",
+      "userId": 1,
+      "trainingTypeId": 2,
+      "trainingTypeLabel": "Пункт 2",
+      "type": "power",
+      "date": "2026-03-08T17:09:46.142Z",
+      "kg": 2,
+      "reps": 12
+    },
+    {
+      "id": "4598",
+      "userId": 1,
+      "trainingTypeId": 4,
+      "trainingTypeLabel": "Бег",
+      "type": "endurance",
+      "date": "2026-03-08T17:13:47.280Z",
+      "kilometers": 1,
+      "timeMinutes": 2
+    },
+    {
+      "id": "875f",
+      "userId": 1,
+      "trainingTypeId": 5,
+      "trainingTypeLabel": "Велосипед",
+      "type": "endurance",
+      "date": "2026-03-08T17:13:54.971Z",
+      "kilometers": 2,
+      "timeMinutes": 3
+    },
+    {
+      "id": "73d8",
+      "userId": 1,
+      "trainingTypeId": 4,
+      "trainingTypeLabel": "Бег",
+      "type": "endurance",
+      "date": "2026-03-08T17:19:48.295Z",
+      "kilometers": 2,
+      "timeMinutes": 3
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

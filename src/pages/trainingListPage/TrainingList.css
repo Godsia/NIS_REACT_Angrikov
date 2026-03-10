@@ -1,0 +1,119 @@
+.training-list-page{
+    min-height:100vh;
+    padding:32px 24px;
+    background:linear-gradient(160deg,#f0f4f8,#e2e8f0);
+    max-width:1200px;
+    margin:auto;
+}
+
+.training-list-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:24px;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.training-list-back{
+    color:#1976d2;
+    text-decoration:none;
+}
+
+.chart-toggle{
+    display:flex;
+    justify-content:flex-end;
+    margin-bottom:16px;
+}
+
+.training-cards{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.day-card{
+    padding:16px;
+    border-radius:12px;
+    background:#fff;
+    box-shadow:0 1px 4px rgba(0,0,0,0.08);
+}
+
+.day-label{
+    font-weight:600;
+    margin-bottom:12px;
+    font-size:1.1rem;
+}
+
+.day-content{
+    display:flex;
+    flex-wrap:wrap;
+    gap:16px;
+}
+
+.pie-card{
+    width:260px;
+    flex-shrink:0;
+}
+
+.chip-group{
+    display:flex;
+    gap:6px;
+    justify-content:center;
+    margin-top:8px;
+}
+
+.chip-power{
+    background:#5470c6;
+    color:white;
+}
+
+.chip-endurance{
+    background:#fac858;
+    color:white;
+}
+
+.training-list{
+    flex:1;
+    min-width:0;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.training-card{
+    border-radius:8px;
+}
+
+.training-header{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    margin-bottom:4px;
+}
+
+.training-dot{
+    width:12px;
+    height:12px;
+    border-radius:50%;
+}
+
+.dot-power{
+    background:#5470c6;
+}
+
+.dot-endurance{
+    background:#fac858;
+}
+
+.training-note{
+    margin-top:4px;
+    color:#64748b;
+    font-size:0.85rem;
+}
+
+.loading{
+    display:flex;
+    justify-content:center;
+    padding:40px 0;
+}
